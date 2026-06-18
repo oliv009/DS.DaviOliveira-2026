@@ -2,47 +2,35 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package classes;
+package classe.abstrata;
 
 /**
  *
- * @author Aluno CA
+ * @author CAMARGO
  */
-public class pessoa {
-    int idade;
+public abstract class pessoa {
     String nome;
-    String cpf;
-    boolean vivo;
-    
-    void recuperanome(){
-        System.out.println("nome do cara é:" + nome);
+    int idade;
+    String matricula;
+    public pessoa(String nome, int idade, String matricula){
+        this.nome=nome;
+        this.idade=idade;
+        this.matricula=matricula;
     }
-    void alteranome(String nome2){
+    public abstract double cacularBonus();
+    void exibirdados(){
+        System.out.println("nome:"+ nome + "idade:" + idade + "matricula:" + matricula);
+    }
+    public String getnome(){
+        return nome;
+    }
+    
+    public int getidade(){
+        return idade;
+    }
+    
+    public String getmatricula(){
+        return matricula;
         
-        nome = nome2;
     }
-    
-    void recuperaidade(){
-        System.out.println("a idade dele é:" + idade);
-    }
-    void alteraidade(int idade2){
-         idade = idade2;
-    }
-    
-    
-    void recuperacpf(){
-        System.out.println("o cpf dele é:" + cpf);
-    }
-    void alteracpf(String cpf2){
-        cpf = cpf2;
-    }
-    
-    void recuperaestado(){
-        System.out.println("Ele está vivo:" + vivo);
-    }
-    void alteraestado(boolean vivo2){
-       vivo = vivo2;
-    }
-         
-    }
-
+}
